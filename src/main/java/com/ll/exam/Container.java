@@ -13,8 +13,8 @@ public class Container {
     private static final HomeController homeController;
 
     static {
-        articleController = (ArticleController) Ut.cls.newObj(ArticleController.class, null);
-        homeController = (HomeController) Ut.cls.newObj(HomeController.class, null);
+        articleController = Ut.cls.newObj(ArticleController.class, null);
+        homeController = Ut.cls.newObj(HomeController.class, null);
     }
 
     public static ArticleController getArticleController() {
