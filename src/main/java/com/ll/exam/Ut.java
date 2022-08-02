@@ -20,8 +20,6 @@ public class Ut {
         }
     }
 
-    ;
-
     public static class str {
 
         public static String decapitalize(String string) {
