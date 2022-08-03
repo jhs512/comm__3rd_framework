@@ -1,6 +1,5 @@
 package com.ll.exam;
 
-import com.ll.exam.annotation.GetMapping;
 import com.ll.exam.util.Ut;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
