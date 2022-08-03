@@ -23,19 +23,21 @@ public class ArticleController {
     public void showDetail(Rq rq) {
         rq.println("게시물 상세페이지<br>");
 
-        long id = rq.getLongPathValueByIndex(1, -1);
-        // long id = rq.getLongParam("id"); // 곧 기능 구현
+        // long id = rq.getLongPathValueByIndex(1, -1);
+        String boardCode = rq.getParam("boardCode", ""); // 곧 기능 구현
+        long id = rq.getLongParam("id", -1); // 곧 기능 구현
 
-        rq.println("%d번 게시물".formatted(id));
+        rq.println("%s 게시판, %d번 게시물".formatted(boardCode, id));
     }
 
     @GetMapping("/usr/article/modify/{boardCode}/{id}")
     public void showModify(Rq rq) {
         rq.println("게시물 수정페이지<br>");
 
-        long id = rq.getLongPathValueByIndex(1, -1);
-        // long id = rq.getLongParam("id"); // 곧 기능 구현
+        // long id = rq.getLongPathValueByIndex(1, -1);
+        String boardCode = rq.getParam("boardCode", ""); // 곧 기능 구현
+        long id = rq.getLongParam("id", -1); // 곧 기능 구현
 
-        rq.println("%d번 게시물".formatted(id));
+        rq.println("%s 게시판, %d번 게시물".formatted(boardCode, id));
     }
 }
